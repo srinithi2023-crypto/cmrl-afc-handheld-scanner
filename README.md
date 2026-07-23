@@ -31,23 +31,32 @@ The objective was to integrate a handheld QR scanner with the existing AFC infra
 
 ---
 ## System Architecture
-## System Architecture
 
-```text
-Passenger QR Code
-        │
-        ▼
-Handheld QR Scanner
-        │ USB
-        ▼
-Raspberry Pi 4
-        │
-        ▼
-Python Scan Logger
-        │
-        ├── Timestamped Logs
-        └── Scan Analytics (Pandas)
-```
++------------------+
+| Passenger QR Code|
++------------------+
+          |
+          v
++------------------+
+| Handheld Scanner |
++------------------+
+          |
+       USB HID
+          |
+          v
++------------------+
+| Raspberry Pi 4   |
++------------------+
+          |
+          v
++------------------+
+| Python Logger    |
++------------------+
+     |          |
+     v          v
++---------+  +----------------+
+| Logs    |  | Pandas Analysis|
++---------+  +----------------+
 
  ## Key Contributions
  • Integrated Newland NLS-HR2081 scanner with Raspberry Pi 4.
