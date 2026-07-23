@@ -19,12 +19,6 @@ The objective was to integrate a handheld QR scanner with the existing AFC infra
 
 ---
 
-## System Architecture
-
-![System Architecture](images/architecture.png)
-
----
-
 ## Tech Stack
 
 - Python
